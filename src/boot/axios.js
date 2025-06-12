@@ -8,9 +8,9 @@ import axios from 'axios'
 // "export default () => {}" function below (which runs individually
 // for each client)
 const api = axios.create({
-  baseURL: 'http://localhost:5212/api',
+  //baseURL: 'http://localhost:5212/api',
   //baseURL: 'http://sistema.ieenayarit.org:9683/api',
-  //baseURL: 'https://apicomputos.apps-ieenayarit.org/api',
+  baseURL: 'https://apicomputos.apps-ieenayarit.org/api',
   //baseURL: 'https://computos.apps-ieenayarit.org/api',
 })
 

@@ -47,7 +47,7 @@
             <div class="row q-mb-sm">
               <div
                 :class="
-                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h3 text-bold text-center'
+                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h6 text-bold text-center'
                 "
                 style="color: #634086"
               >
@@ -55,7 +55,7 @@
               </div>
               <div
                 :class="
-                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h3 text-bold text-center'
+                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h6 text-bold text-center'
                 "
                 style="color: #634086"
               >
@@ -63,7 +63,7 @@
               </div>
               <div
                 :class="
-                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h3 text-bold text-center'
+                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h6 text-bold text-center'
                 "
                 style="color: #634086"
               >
@@ -194,7 +194,7 @@
             <div class="row q-mb-sm">
               <div
                 :class="
-                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h3 text-bold text-center'
+                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h6 text-bold text-center'
                 "
                 style="color: #634086"
               >
@@ -202,7 +202,7 @@
               </div>
               <div
                 :class="
-                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h3 text-bold text-center'
+                  $q.screen.xs ? 'col text-bold text-center' : 'col text-h6 text-bold text-center'
                 "
                 style="color: #634086"
               >
@@ -218,7 +218,7 @@
               >
                 {{
                   informacion.porcentaje_Participacion !== undefined
-                    ? (informacion.porcentaje_Participacion * 100).toFixed(4)
+                    ? informacion.porcentaje_Participacion.toFixed(4)
                     : '0.0000'
                 }}%
               </div>
@@ -588,8 +588,9 @@
                 <div class="row q-mb-sm">
                   <div class="col text-h6 text-bold text-center" style="color: #634086">
                     {{
-                      informacion_JAO_MUN.porcentaje_Participacion !== undefined
-                        ? (informacion_JAO_MUN.porcentaje_Participacion * 100).toFixed(4)
+                      informacion_JAO_MUN.porcentaje_Participacion !== undefined &&
+                      informacion_JAO_MUN.porcentaje_Participacion !== null
+                        ? informacion_JAO_MUN.porcentaje_Participacion.toFixed(4)
                         : '0.0000'
                     }}%
                   </div>
@@ -1069,7 +1070,7 @@
                   <div
                     :class="
                       !$q.screen.xs
-                        ? 'col text-h3 text-bold text-center'
+                        ? 'col text-h6 text-bold text-center'
                         : 'col text-bold text-center'
                     "
                     style="color: #634086"
@@ -1079,7 +1080,7 @@
                   <div
                     :class="
                       !$q.screen.xs
-                        ? 'col text-h3 text-bold text-center'
+                        ? 'col text-h6 text-bold text-center'
                         : 'col text-bold text-center'
                     "
                     style="color: #634086"
@@ -1089,7 +1090,7 @@
                   <div
                     :class="
                       !$q.screen.xs
-                        ? 'col text-h3 text-bold text-center'
+                        ? 'col text-h6 text-bold text-center'
                         : 'col text-bold text-center'
                     "
                     style="color: #634086"
@@ -1259,7 +1260,7 @@
                   <div
                     :class="
                       !$q.screen.xs
-                        ? 'col text-h3 text-bold text-center'
+                        ? 'col text-h6 text-bold text-center'
                         : 'col text-bold text-center'
                     "
                     style="color: #634086"
@@ -1269,7 +1270,7 @@
                   <div
                     :class="
                       !$q.screen.xs
-                        ? 'col text-h3 text-bold text-center'
+                        ? 'col text-h6 text-bold text-center'
                         : 'col text-bold text-center'
                     "
                     style="color: #634086"
@@ -1287,8 +1288,9 @@
                     style="color: #634086"
                   >
                     {{
-                      informacion_JAO_MUN.porcentaje_Participacion !== undefined
-                        ? (informacion_JAO_MUN.porcentaje_Participacion * 100).toFixed(4)
+                      informacion_JAO_MUN.porcentaje_Participacion !== undefined &&
+                      informacion_JAO_MUN.porcentaje_Participacion !== null
+                        ? informacion_JAO_MUN.porcentaje_Participacion.toFixed(4)
                         : '0.0000'
                     }}%
                   </div>

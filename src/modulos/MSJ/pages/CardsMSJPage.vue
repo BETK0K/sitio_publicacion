@@ -4,9 +4,9 @@
       <q-card class="ultra-compact-card q-pa-sm" v-if="list_Candidatos_Judicial.length > 0">
         <div class="row items-center no-wrap">
           <div class="text-caption text-bold q-mr-sm">Último corte:</div>
-          <div class="text-caption text-bold q-mr-sm">{{ fecha_Corte.fecha }}</div>
-          <div class="tiny-text q-mr-xs">{{ fecha_Corte.zona }}</div>
-          <div class="text-caption text-bold">18:30 h UTC-7</div>
+          <div class="text-caption text-bold q-mr-sm">06 junio 2025</div>
+          <div class="tiny-text q-mr-xs">Tiempo de Nayarit</div>
+          <div class="text-caption text-bold">17:00 h UTC-7</div>
         </div>
       </q-card>
     </div>
@@ -20,7 +20,6 @@ import { defineProps } from 'vue'
 import { storeToRefs } from 'pinia'
 import cardsComp from 'src/components/cardsComp.vue'
 import filtros from '../../../components/filtrosComp.vue'
-import { useConfiguracionStore } from 'src/stores/configuracion-store'
 import { useCandidatosStore } from 'src/stores/candidatos-store'
 
 const candidatosStore = useCandidatosStore()
@@ -32,9 +31,6 @@ const props = defineProps({
 })
 
 //---------------------------------------------------------------------------------
-
-const configuracionStore = useConfiguracionStore()
-const { fecha_Corte } = storeToRefs(configuracionStore)
 </script>
 
 <style>
